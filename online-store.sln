@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "online-store", "online-store\online-store.csproj", "{355E8281-DB44-47E9-8CC2-D9823B9970DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{355E8281-DB44-47E9-8CC2-D9823B9970DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{355E8281-DB44-47E9-8CC2-D9823B9970DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{355E8281-DB44-47E9-8CC2-D9823B9970DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{355E8281-DB44-47E9-8CC2-D9823B9970DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
