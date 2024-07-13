@@ -1,0 +1,16 @@
+D:\online-store\Abstraction\bin\Debug\net8.0\Abstraction.deps.json
+D:\online-store\Abstraction\bin\Debug\net8.0\Abstraction.dll
+D:\online-store\Abstraction\bin\Debug\net8.0\Abstraction.pdb
+D:\online-store\Abstraction\bin\Debug\net8.0\Model.dll
+D:\online-store\Abstraction\bin\Debug\net8.0\Model.pdb
+D:\online-store\Abstraction\obj\Debug\net8.0\Abstraction.csproj.AssemblyReference.cache
+D:\online-store\Abstraction\obj\Debug\net8.0\Abstraction.GeneratedMSBuildEditorConfig.editorconfig
+D:\online-store\Abstraction\obj\Debug\net8.0\Abstraction.AssemblyInfoInputs.cache
+D:\online-store\Abstraction\obj\Debug\net8.0\Abstraction.AssemblyInfo.cs
+D:\online-store\Abstraction\obj\Debug\net8.0\Abstraction.csproj.CoreCompileInputs.cache
+D:\online-store\Abstraction\obj\Debug\net8.0\Abstraction.sourcelink.json
+D:\online-store\Abstraction\obj\Debug\net8.0\Abstract.2E1C7800.Up2Date
+D:\online-store\Abstraction\obj\Debug\net8.0\Abstraction.dll
+D:\online-store\Abstraction\obj\Debug\net8.0\refint\Abstraction.dll
+D:\online-store\Abstraction\obj\Debug\net8.0\Abstraction.pdb
+D:\online-store\Abstraction\obj\Debug\net8.0\ref\Abstraction.dll
