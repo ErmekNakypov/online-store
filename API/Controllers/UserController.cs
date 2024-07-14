@@ -13,6 +13,7 @@ public class UserController : ControllerBase
     public UserController(IUserService userService)
     {
         _userService = userService;
+        
     }
 
     [HttpGet("get-users")]
@@ -37,6 +38,7 @@ public class UserController : ControllerBase
 
     [HttpGet("get-user/{id}")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.NotFound)]
     public async Task<ActionResult<GetUserDto>> GetUser(int id)
     {
         var user = await _userService.GetUser(id);
@@ -62,14 +64,15 @@ public class UserController : ControllerBase
 
     [HttpPut("update-user")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.NotFound)]
     public async Task<ActionResult<int>> UpdateUser(UpdateUserDto updateUserDto)
     {
         var userId = await _userService.UpdateUser(updateUserDto);
         return Ok(userId);
     }
-
     [HttpDelete("delete-user/{id}")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.NotFound)]
     public async Task<ActionResult<int>> DeleteUser(int id)
     {
         var userId = await Task.FromResult(_userService.DeleteUser(id));

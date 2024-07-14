@@ -1,5 +1,6 @@
 ﻿using Abstraction.Interfaces.Repositories;
 using Abstraction.Interfaces.Services;
+using BLL.Exceptions;
 using Mapster;
 using Microsoft.Extensions.Logging;
 using Model.Dtos.User;
@@ -40,8 +41,7 @@ public class UserService : IUserService
         var user = await _repository.GetItemAsync(x => x.Id == id);
         if (user == null)
         {
-            _logger.LogWarning("User with ID {UserId} not found", id);
-            throw new ArgumentException("User not found");
+            throw new InvalidUserIdException($"User with ID {id} does not exist");
         }
         _logger.LogInformation("Fetched user with ID {UserId}", id);
         return user.Adapt<GetUserDto>();
@@ -53,8 +53,7 @@ public class UserService : IUserService
         var user = await _repository.GetTrackedItemAsync(x => x.Id == id);
         if (user == null)
         {
-            _logger.LogWarning("Tracked user with ID {UserId} not found", id);
-            throw new ArgumentException("User not found");
+            throw new InvalidUserIdException($"User with ID {id} does not exist");
         }
         _logger.LogInformation("Fetched tracked user with ID {UserId}", id);
         return user.Adapt<GetUserDto>();
@@ -78,8 +77,7 @@ public class UserService : IUserService
         var user = await _repository.GetItemAsync(x => x.Id == updateUserDto.Id);
         if (user == null)
         {
-            _logger.LogWarning("User with ID {UserId} not found", updateUserDto.Id);
-            throw new ArgumentException("User not found");
+            throw new InvalidUserIdException($"User with ID {updateUserDto.Id} does not exist");
         }
         
         user = updateUserDto.Adapt<User>();
@@ -99,8 +97,7 @@ public class UserService : IUserService
         var user = _repository.GetItemAsync(x => x.Id == id);
         if (user == null)
         {
-            _logger.LogWarning("User with ID {UserId} not found", id);
-            throw new ArgumentException("User not found");
+            throw new InvalidUserIdException($"User with ID {id} does not exist");
         }
         var users = _repository.DeleteItem(x => x.Id == id).ProjectToType<GetUserDto>();
         _repository.SaveChangesAsync();

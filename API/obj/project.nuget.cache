@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Hh+Rqh5g84TbOwGFsc5kqbwdBRHzvE9PhupMRPUOfJzkqeF1BmnGLyEj0bnzLM8xUBMAGhmA3TK9fLAg90/7Tw==",
+  "dgSpecHash": "n2Dtraaz6LuScsItHYrbsEnipQ4fNYqcI1mzBTGf1JnM6AReW1oW7YFDnwQONSj6jJm+SHw3U0EvAtB1aeW+OA==",
   "success": true,
   "projectFilePath": "D:\\online-store\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -68,6 +68,7 @@
     "C:\\Users\\space\\.nuget\\packages\\serilog.sinks.file\\5.0.0\\serilog.sinks.file.5.0.0.nupkg.sha512",
     "C:\\Users\\space\\.nuget\\packages\\serilog.sinks.mssqlserver\\6.6.2-dev-00080\\serilog.sinks.mssqlserver.6.6.2-dev-00080.nupkg.sha512",
     "C:\\Users\\space\\.nuget\\packages\\serilog.sinks.periodicbatching\\3.1.0\\serilog.sinks.periodicbatching.3.1.0.nupkg.sha512",
+    "C:\\Users\\space\\.nuget\\packages\\serilog.sinks.seq\\8.0.0\\serilog.sinks.seq.8.0.0.nupkg.sha512",
     "C:\\Users\\space\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\space\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\space\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
