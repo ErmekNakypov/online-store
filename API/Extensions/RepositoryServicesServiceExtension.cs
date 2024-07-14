@@ -1,7 +1,7 @@
 ﻿using Abstraction.Interfaces.Repositories;
 using DAL.Repositories;
 
-namespace online_store.Extensions;
+namespace API.Extensions;
 
 public static class RepositoryServicesServiceExtension
 {

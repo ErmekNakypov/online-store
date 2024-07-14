@@ -147,3 +147,15 @@ D:\online-store\API\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resour
 D:\online-store\API\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\online-store\API\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\online-store\API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\online-store\API\bin\Debug\net8.0\Serilog.dll
+D:\online-store\API\bin\Debug\net8.0\Serilog.AspNetCore.dll
+D:\online-store\API\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+D:\online-store\API\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+D:\online-store\API\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+D:\online-store\API\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+D:\online-store\API\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+D:\online-store\API\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+D:\online-store\API\bin\Debug\net8.0\Serilog.Sinks.File.dll
+D:\online-store\API\bin\Debug\net8.0\Serilog.Sinks.MSSqlServer.dll
+D:\online-store\API\bin\Debug\net8.0\Serilog.Sinks.PeriodicBatching.dll
+D:\online-store\API\bin\Debug\net8.0\System.Text.Json.dll

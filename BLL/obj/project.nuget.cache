@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "F89Pt2Pgiw9GUrxISC8+fCiC688i/zDsBO0WednCyLlAU+A0sn5C334dkEuxCOUetHrpPBnG5j2x40evo4jvMw==",
+  "dgSpecHash": "oZyrvWNzZNOuKVCJePRc9/v0Q3jn+WqGJHnk16PsTPJFYcMNRx6+GGPtZaow6dqqpjeOpSL6e1k9TURSfyEdSw==",
   "success": true,
   "projectFilePath": "D:\\online-store\\BLL\\BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\space\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\space\\.nuget\\packages\\mapster\\7.4.1-pre01\\mapster.7.4.1-pre01.nupkg.sha512",
     "C:\\Users\\space\\.nuget\\packages\\mapster.core\\1.2.2-pre01\\mapster.core.1.2.2-pre01.nupkg.sha512",
-    "C:\\Users\\space\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\space\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\space\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\space\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\space\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\space\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"

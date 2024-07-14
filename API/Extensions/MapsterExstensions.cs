@@ -1,10 +1,10 @@
 ﻿using Mapster;
-using Model.Dtos;
+using Model.Dtos.User;
 using Model.Entities;
 
-namespace online_store.Extensions;
+namespace API.Extensions;
 
-public static class MapsterExstensions
+public static class MapsterExtensions
 {
     public static void InitMapping(this IApplicationBuilder app)
     {
@@ -13,6 +13,6 @@ public static class MapsterExstensions
 
     private static void UserMapping(this IApplicationBuilder app)
     {
-        TypeAdapterConfig<User, UserDto>.NewConfig();
+        TypeAdapterConfig<User, GetUserDto>.NewConfig();
     }
 }

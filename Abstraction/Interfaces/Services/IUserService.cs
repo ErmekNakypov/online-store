@@ -1,12 +1,16 @@
-﻿using Model.Dtos;
+﻿using Model.Dtos.User;
 
 namespace Abstraction.Interfaces.Services;
 
 public interface IUserService
 {
-    IQueryable<UserDto> GetUsers();
-    Task<UserDto> GetUser(int id);
-    Task<int> AddUser(UserDto userDto);
-    Task<int> UpdateUser(UserDto userDto);
-    IQueryable<UserDto> DeleteUser(int id);
+    IQueryable<GetUserDto> GetUsers();
+    
+    IQueryable<GetUserDto> GetTrackedUsers();
+    
+    Task<GetUserDto> GetUser(int id);
+    Task<GetUserDto> GetTrackedUser(int id);
+    Task<int> AddUser(AddUserDto getUserDto);
+    Task<int> UpdateUser(UpdateUserDto getUserDto);
+    IQueryable<GetUserDto> DeleteUser(int id);
 }

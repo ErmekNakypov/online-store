@@ -28,9 +28,11 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
         return Set.AsNoTracking();
     }
 
-    public IQueryable<T> GetTrackedItems(Expression<Func<T, bool>> filter)
+    public IQueryable<T> GetTrackedItems(Expression<Func<T, bool>>? filter = null)
     {
-        return Set.Where(filter);
+        if (filter != null) 
+            return Set.Where(filter);
+        return Set;
     }
 
     public async Task<T?> GetItemAsync(Expression<Func<T, bool>> filter)

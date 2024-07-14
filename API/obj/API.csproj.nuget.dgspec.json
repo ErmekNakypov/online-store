@@ -133,6 +133,22 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "Serilog": {
+              "target": "Package",
+              "version": "[4.0.1-dev-02205, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.2-dev-00341, )"
+            },
+            "Serilog.Sinks.Debug": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Serilog.Sinks.MSSqlServer": {
+              "target": "Package",
+              "version": "[6.6.2-dev-00080, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
@@ -204,6 +220,10 @@
             "Mapster": {
               "target": "Package",
               "version": "[7.4.1-pre01, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [

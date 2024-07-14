@@ -1,7 +1,7 @@
 ﻿using Abstraction.Interfaces.Services;
 using BLL.Services;
 
-namespace online_store.Extensions;
+namespace API.Extensions;
 
 public static class BllServicesServiceExtension
 {

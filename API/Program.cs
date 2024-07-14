@@ -1,9 +1,13 @@
-
-
-using online_store.Extensions;
+using API.Extensions;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Host.UseSerilog((HostBuilderContext context, IServiceProvider services, LoggerConfiguration loggerConfiguration) => 
+{
+    loggerConfiguration
+        .ReadFrom.Configuration(context.Configuration) 
+        .ReadFrom.Services(services); 
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -19,6 +23,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
 app.MapControllers();
 

@@ -1,7 +1,7 @@
 ﻿using DAL.EntityFramework;
 using Microsoft.EntityFrameworkCore;
 
-namespace online_store.Extensions;
+namespace API.Extensions;
 
 public static class EntityFrameworkExtension
 {
