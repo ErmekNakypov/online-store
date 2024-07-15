@@ -9,4 +9,4 @@ public static class BllServicesServiceExtension
     {
         services.AddScoped<IUserService, UserService>();
     }
-}
+}   
