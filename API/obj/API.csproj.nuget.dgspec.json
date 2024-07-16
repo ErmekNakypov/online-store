@@ -119,6 +119,10 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
             "Mapster": {
               "target": "Package",
               "version": "[7.4.1-pre01, )"
@@ -383,6 +387,10 @@
               "version": "[13.0.1, )"
             },
             "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.ViewFeatures": {
               "target": "Package",
               "version": "[2.2.0, )"
             },

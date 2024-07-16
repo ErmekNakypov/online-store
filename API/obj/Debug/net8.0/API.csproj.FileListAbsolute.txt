@@ -160,3 +160,4 @@ D:\online-store\API\bin\Debug\net8.0\Serilog.Sinks.MSSqlServer.dll
 D:\online-store\API\bin\Debug\net8.0\Serilog.Sinks.PeriodicBatching.dll
 D:\online-store\API\bin\Debug\net8.0\System.Text.Json.dll
 D:\online-store\API\bin\Debug\net8.0\Serilog.Sinks.Seq.dll
+D:\online-store\API\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
