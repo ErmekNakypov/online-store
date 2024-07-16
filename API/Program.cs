@@ -1,16 +1,12 @@
 using API.Extensions;
-using DAL.EntityFramework;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Model.Identity;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Host.ConfigureSerilog();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 builder.Services.AddControllers();
-builder.Services.AddFluentValidators();
 builder.Services.AddEntityFramework(builder.Configuration);
 builder.Services.AddBllServices();
 builder.Services.AddRepositoryServices();

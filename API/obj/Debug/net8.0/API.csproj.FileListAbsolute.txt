@@ -161,3 +161,9 @@ D:\online-store\API\bin\Debug\net8.0\Serilog.Sinks.PeriodicBatching.dll
 D:\online-store\API\bin\Debug\net8.0\System.Text.Json.dll
 D:\online-store\API\bin\Debug\net8.0\Serilog.Sinks.Seq.dll
 D:\online-store\API\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\online-store\API\bin\Debug\net8.0\FluentValidation.dll
+D:\online-store\API\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+D:\online-store\API\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\online-store\API\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\online-store\API\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\online-store\API\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll

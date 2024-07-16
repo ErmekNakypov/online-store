@@ -1,15 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "oyWYEwOUVMxBPQR429too1NFjKzZ9q3WS72XWitUXNentcdb0u8j4D+V/DEMlgjP0wUeDC3S1xYHF/SkIHn2NA==",
+  "dgSpecHash": "s0bmALw1b3IEVq45IafDX3lnBWNwXvns4K2JRjZJQWGON45RiMUB3JVOxDwGBW66L9SYZwZKYlwPTXKj6NyzKw==",
   "success": true,
   "projectFilePath": "D:\\online-store\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\space\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\space\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\space\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
-    "C:\\Users\\space\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
-    "C:\\Users\\space\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
-    "C:\\Users\\space\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
+    "C:\\Users\\space\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
     "C:\\Users\\space\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\space\\.nuget\\packages\\mapster\\7.4.1-pre01\\mapster.7.4.1-pre01.nupkg.sha512",
     "C:\\Users\\space\\.nuget\\packages\\mapster.core\\1.2.2-pre01\\mapster.core.1.2.2-pre01.nupkg.sha512",

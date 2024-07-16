@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using BLL.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Model.Dtos.Identity;
 using Model.Identity;
@@ -9,22 +10,22 @@ namespace API.Controllers;
 [Route("api/[controller]")]
 public class AccountController : ControllerBase
 {
-    private readonly UserManager<ApplicationUser> _userManager;
-    private readonly SignInManager<ApplicationUser> _signInManager;
-    private readonly RoleManager<ApplicationUser> _roleManager;
+    private readonly AccountService _accountService;
 
-    public AccountController(UserManager<ApplicationUser> userManager,
-        SignInManager<ApplicationUser> signInManager,
-        RoleManager<ApplicationUser> roleManager)
+    public AccountController(AccountService accountService)
     {
-        _userManager = userManager;
-        _signInManager = signInManager;
-        _roleManager = roleManager;
+        _accountService = accountService;
     }
 
     [HttpPost("register")]
-    public async Task<IActionResult> PostRegister(RegisterUserDto registerUserDto)
+    public async Task<ApplicationUser> PostRegister(RegisterUserDto registerUserDto)
     {
-        return null;
+      return await _accountService.RegisterUser(registerUserDto);
+    }
+
+    [HttpGet]
+    public async Task<bool> IsEmailAlreadyRegistered(string email)
+    {
+        return await _accountService.IsEmailAlreadyRegistered(email);
     }
 }

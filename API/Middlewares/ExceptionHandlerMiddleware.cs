@@ -22,9 +22,16 @@ public class ExceptionHandlerMiddleware
         }
         catch (InvalidUserIdException ex)
         {
-            _logger.LogError("{ExceptionType} {ExceptionMessage}", 
+            _logger.LogError("{ExceptionType} {ExceptionMessage}",
                 ex.GetType().ToString(), ex.Message);
             context.Response.StatusCode = (int)HttpStatusCode.NotFound;
+            await context.Response.WriteAsync(ex.Message);
+        }
+        catch (InvalidOperationException ex)
+        {
+            _logger.LogError("{ExceptionType} {ExceptionMessage}", 
+                ex.GetType().ToString(), ex.Message);
+            context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
             await context.Response.WriteAsync(ex.Message);
         }
         catch (Exception ex)
@@ -35,4 +42,16 @@ public class ExceptionHandlerMiddleware
             await context.Response.WriteAsync(ex.Message);
         }
     }
+    
+    // private async Task HandleExceptionAsync(HttpContext context, Exception exception, HttpStatusCode statusCode)
+    // {
+    //     _logger.LogError("{ExceptionType} {ExceptionMessage}",
+    //         exception.GetType().ToString(), exception.Message);
+    //     
+    //     context.Response.ContentType = "application/json";
+    //     context.Response.StatusCode = (int)statusCode;
+    //     
+    //     var result = JsonConvert.SerializeObject(new { error = exception.Message });
+    //     await context.Response.WriteAsync(result);
+    // }
 }
