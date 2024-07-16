@@ -8,5 +8,6 @@ public static class BllServicesServiceExtension
     public static void AddBllServices(this IServiceCollection services)
     {
         services.AddScoped<IUserService, UserService>();
+        services.AddScoped<IAccountService, AccountService>();
     }
 }   

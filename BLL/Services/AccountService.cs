@@ -1,11 +1,12 @@
-﻿using Mapster;
+﻿using Abstraction.Interfaces.Services;
+using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Model.Dtos.Identity;
 using Model.Identity;
 
 namespace BLL.Services;
 
-public class AccountService
+public class AccountService : IAccountService
 {
     private readonly UserManager<ApplicationUser> _userManager;
     private readonly RoleManager<ApplicationRole> _roleManager;

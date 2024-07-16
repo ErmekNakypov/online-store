@@ -1,5 +1,5 @@
-﻿using BLL.Services;
-using Microsoft.AspNetCore.Identity;
+﻿using Abstraction.Interfaces.Services;
+using BLL.Services;
 using Microsoft.AspNetCore.Mvc;
 using Model.Dtos.Identity;
 using Model.Identity;
@@ -10,9 +10,9 @@ namespace API.Controllers;
 [Route("api/[controller]")]
 public class AccountController : ControllerBase
 {
-    private readonly AccountService _accountService;
+    private readonly IAccountService _accountService;
 
-    public AccountController(AccountService accountService)
+    public AccountController(IAccountService accountService)
     {
         _accountService = accountService;
     }
