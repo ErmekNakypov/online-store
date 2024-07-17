@@ -25,7 +25,7 @@ public class AccountService : IAccountService
         _jwtService = jwtService;
     }
 
-    public async Task<AuthenticationResponse> RegisterUser(RegisterUserDto registerUserDto)
+    public async Task<string> RegisterUser(RegisterUserDto registerUserDto)
     {
         var user = registerUserDto.Adapt<ApplicationUser>();
         var result = await _userManager.CreateAsync(user, registerUserDto.Password);
@@ -34,10 +34,7 @@ public class AccountService : IAccountService
             var errors = string.Join(", ", result.Errors.Select(e => e.Description));
             throw new InvalidOperationException($"Registration failed: {errors}");
         }
-
-        await _signInManager.SignInAsync(user, isPersistent: false);
-        var authenticationResponse = _jwtService.GenerateToken(user);
-        return authenticationResponse;
+        return "Registered successfully";
     }
 
     public async Task<bool> IsEmailAlreadyRegistered(string email)
@@ -54,7 +51,6 @@ public class AccountService : IAccountService
         var user = await _userManager.FindByEmailAsync(loginUserDto.Email);
         if (user is not null)   
         {
-            await _signInManager.SignInAsync(user, isPersistent: false);
             var authenticationResponse = _jwtService.GenerateToken(user);
             return authenticationResponse;
         };

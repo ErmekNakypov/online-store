@@ -20,7 +20,7 @@ public class AccountController : ControllerBase
     [HttpPost("register")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-    public async Task<AuthenticationResponse> PostRegister(RegisterUserDto registerUserDto)
+    public async Task<string> PostRegister(RegisterUserDto registerUserDto)
     {
       return await _accountService.RegisterUser(registerUserDto);
     }

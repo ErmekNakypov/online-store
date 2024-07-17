@@ -165,3 +165,4 @@ D:\online-store\API\bin\Debug\net8.0\FluentValidation.dll
 D:\online-store\API\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\online-store\API\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\online-store\API\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+D:\online-store\API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
