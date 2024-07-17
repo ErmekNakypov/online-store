@@ -41,7 +41,7 @@ public class UserService : IUserService
         var user = await _repository.GetItemAsync(x => x.Id == id);
         if (user == null)
         {
-            throw new InvalidUserIdException($"User with ID {id} does not exist");
+            throw new NotFoundException($"User with ID {id} does not exist");
         }
         _logger.LogInformation("Fetched user with ID {UserId}", id);
         return user.Adapt<GetUserDto>();
@@ -53,7 +53,7 @@ public class UserService : IUserService
         var user = await _repository.GetTrackedItemAsync(x => x.Id == id);
         if (user == null)
         {
-            throw new InvalidUserIdException($"User with ID {id} does not exist");
+            throw new NotFoundException($"User with ID {id} does not exist");
         }
         _logger.LogInformation("Fetched tracked user with ID {UserId}", id);
         return user.Adapt<GetUserDto>();
@@ -77,7 +77,7 @@ public class UserService : IUserService
         var user = await _repository.GetItemAsync(x => x.Id == updateUserDto.Id);
         if (user == null)
         {
-            throw new InvalidUserIdException($"User with ID {updateUserDto.Id} does not exist");
+            throw new NotFoundException($"User with ID {updateUserDto.Id} does not exist");
         }
         
         user = updateUserDto.Adapt<User>();
@@ -97,7 +97,7 @@ public class UserService : IUserService
         var user = _repository.GetItemAsync(x => x.Id == id);
         if (user == null)
         {
-            throw new InvalidUserIdException($"User with ID {id} does not exist");
+            throw new NotFoundException($"User with ID {id} does not exist");
         }
         var users = _repository.DeleteItem(x => x.Id == id).ProjectToType<GetUserDto>();
         _repository.SaveChangesAsync();

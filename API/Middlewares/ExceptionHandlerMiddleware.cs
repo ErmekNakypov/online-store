@@ -19,8 +19,12 @@ public class ExceptionHandlerMiddleware
         try
         {
             await _next(context);
+            // if (context.Request.Path.StartsWithSegments("/api/account/logout") && context.Response.StatusCode == 200)
+            // {
+            //     context.Response.StatusCode = (int)HttpStatusCode.NoContent;
+            // }
         }
-        catch (InvalidUserIdException ex)
+        catch (NotFoundException ex)
         {
             _logger.LogError("{ExceptionType} {ExceptionMessage}",
                 ex.GetType().ToString(), ex.Message);

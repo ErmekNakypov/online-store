@@ -1,4 +1,5 @@
-﻿using Abstraction.Interfaces.Services;
+﻿using System.Net;
+using Abstraction.Interfaces.Services;
 using BLL.Services;
 using Microsoft.AspNetCore.Mvc;
 using Model.Dtos.Identity;
@@ -18,11 +19,31 @@ public class AccountController : ControllerBase
     }
 
     [HttpPost("register")]
+    [ProducesResponseType((int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.BadRequest)]
     public async Task<ApplicationUser> PostRegister(RegisterUserDto registerUserDto)
     {
       return await _accountService.RegisterUser(registerUserDto);
     }
 
+    [HttpPost("login")]
+    [ProducesResponseType((int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.NotFound)]
+    [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+    public async Task<ApplicationUser> PostLogin(LoginUserDto loginUserDto)
+    {
+        return await _accountService.LoginUser(loginUserDto);
+    }
+    
+    [HttpGet("logout")]
+    [ProducesResponseType((int)HttpStatusCode.OK)]
+    [ProducesResponseType((int)HttpStatusCode.NoContent)]
+    public async Task GetLogout()
+    {
+        await _accountService.LogoutUser();
+       // HttpContext.Response.StatusCode = (int)HttpStatusCode.NoContent;
+    }
+    
     [HttpGet]
     public async Task<bool> IsEmailAlreadyRegistered(string email)
     {

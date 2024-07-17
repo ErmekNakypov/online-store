@@ -1,4 +1,5 @@
 ﻿using Abstraction.Interfaces.Services;
+using BLL.Exceptions;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Model.Dtos.Identity;
@@ -32,8 +33,23 @@ public class AccountService : IAccountService
 
     public async Task<bool> IsEmailAlreadyRegistered(string email)
     {
-        ApplicationUser? user = await _userManager.FindByEmailAsync(email);
+        var user = await _userManager.FindByEmailAsync(email);
         if (user == null) return false;
         return true;
+    }
+
+    public async Task<ApplicationUser> LoginUser(LoginUserDto loginUserDto)
+    { 
+        var result = await _signInManager.PasswordSignInAsync(loginUserDto.Email, loginUserDto.Password, 
+           isPersistent: false, lockoutOnFailure: false);
+        if (!result.Succeeded) throw new InvalidOperationException("Login failed");
+        var user = await _userManager.FindByEmailAsync(loginUserDto.Email);
+        if (user != null) return user;
+        throw new NotFoundException($"$User with email {loginUserDto.Email} does not exist");
+    }
+
+    public async Task LogoutUser()
+    {
+        await _signInManager.SignOutAsync();
     }
 }
