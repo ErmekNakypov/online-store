@@ -12,7 +12,6 @@ namespace API.Controllers;
 public class AccountController : ControllerBase
 {
     private readonly IAccountService _accountService;
-
     public AccountController(IAccountService accountService)
     {
         _accountService = accountService;
@@ -21,7 +20,7 @@ public class AccountController : ControllerBase
     [HttpPost("register")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-    public async Task<ApplicationUser> PostRegister(RegisterUserDto registerUserDto)
+    public async Task<AuthenticationResponse> PostRegister(RegisterUserDto registerUserDto)
     {
       return await _accountService.RegisterUser(registerUserDto);
     }
@@ -30,7 +29,7 @@ public class AccountController : ControllerBase
     [ProducesResponseType((int)HttpStatusCode.OK)]
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-    public async Task<ApplicationUser> PostLogin(LoginUserDto loginUserDto)
+    public async Task<AuthenticationResponse> PostLogin(LoginUserDto loginUserDto)
     {
         return await _accountService.LoginUser(loginUserDto);
     }

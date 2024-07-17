@@ -9,5 +9,6 @@ public static class BllServicesServiceExtension
     {
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<IAccountService, AccountService>();
+        services.AddTransient<IJwtService, JwtService>();
     }
 }   

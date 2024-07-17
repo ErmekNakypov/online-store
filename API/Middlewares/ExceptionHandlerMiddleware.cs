@@ -35,8 +35,9 @@ public class ExceptionHandlerMiddleware
         {
             _logger.LogError("{ExceptionType} {ExceptionMessage}", 
                 ex.GetType().ToString(), ex.Message);
+            context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-            await context.Response.WriteAsync(ex.Message);
+            await context.Response.WriteAsync(System.Text.Json.JsonSerializer.Serialize(ex.Message));
         }
         catch (Exception ex)
         {
