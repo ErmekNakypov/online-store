@@ -25,5 +25,5 @@
         <ProjectReference Include="..\Abstraction\Abstraction.csproj"/>
         <ProjectReference Include="..\Model\Model.csproj"/>
     </ItemGroup>
-
+Ermek
 </Project>
